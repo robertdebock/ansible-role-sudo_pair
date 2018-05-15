@@ -1,0 +1,5 @@
+---
+- robertdebock.bootstrap
+- robertdebock.epel
+- robertdebock.scl
+- robertdebock.buildtools
