@@ -6,4 +6,7 @@
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.epel
+    - role: robertdebock.scl
+    - role: robertdebock.buildtools
     - role: ansible-role-sudo-pair
