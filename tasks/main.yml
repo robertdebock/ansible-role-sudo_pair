@@ -17,7 +17,7 @@
   command: cargo build --release
   args:
     chdir: /tmp/{{ sudo_pair_unpack_directory }}
-    creates: /tmp/{{ sudo_pair_unpack_directory }}/target/release/libsudopair.dylib
+    creates: /tmp/{{ sudo_pair_unpack_directory }}/target
 
 - name: install software
   copy:

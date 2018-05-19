@@ -1,6 +1,6 @@
 ---
 # vars file for sudo-pair
-sudo_pair_version: v0.9.1
+sudo_pair_version: v1.0.0
 
 sudo_pair_release: https://github.com/square/sudo_pair/archive/sudo_pair-{{ sudo_pair_version }}.tar.gz
 sudo_pair_unpack_directory: sudo_pair-sudo_pair-{{ sudo_pair_version }}
