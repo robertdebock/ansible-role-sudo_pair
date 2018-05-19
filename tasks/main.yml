@@ -4,7 +4,8 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ sudo_pair_requirements[ansible_distribution] | default([]) }}"
+    - "{{ sudo_pair_requirements[ansible_distribution]
+      | default(sudo_pair_requirements['default') }}"
 
 - name: download and unpack software
   git:
