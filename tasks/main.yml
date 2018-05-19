@@ -4,6 +4,7 @@
   git:
     repo: "{{ sudo_pair_git_repo }}"
     dest: "{{ sudo_pair_unpack_directory }}"
+    version: "{{ sudo_pair_version }}"
 
 - name: install requirements
   package:
