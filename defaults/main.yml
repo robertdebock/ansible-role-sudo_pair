@@ -1,8 +1,4 @@
 ---
 # defaults file for sudo-pair
-binary_path: /usr/bin/sudo_approve
-user_prompt_path: /etc/sudo_pair.prompt.user
-pair_prompt_path: /etc/sudo_pair.prompt.pair
-socket_dir: /var/run/sudo_pair
-gids_enforced: 0
-gids_exempted: none
+sudo-pair_gids_enforced: 0
+sudo-pair_gids_exempted: none

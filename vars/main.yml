@@ -17,6 +17,11 @@ sudo_pair_files:
     dest: /etc/sudo.prompt.pair
     mode: "0644"
 
+sudo-pair_binary_path: /usr/bin/sudo_approve
+sudo-pair_user_prompt_path: /etc/sudo_pair.prompt.user
+sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair
+sudo-pair_socket_dir: /var/run/sudo_pair
+
 sudo_pair_requirements:
   CentOS:
     - cargo
