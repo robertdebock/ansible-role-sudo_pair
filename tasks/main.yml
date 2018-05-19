@@ -1,16 +1,16 @@
 ---
 # tasks file for sudo-pair
-- name: download and unpack software
-  git:
-    repo: "{{ sudo_pair_git_repo }}"
-    dest: "{{ sudo_pair_unpack_directory }}"
-    version: "{{ sudo_pair_version }}"
-
 - name: install requirements
   package:
     name: "{{ item }}"
   with_items:
     - "{{ sudo_pair_requirements[ansible_distribution] | default([]) }}"
+
+- name: download and unpack software
+  git:
+    repo: "{{ sudo_pair_git_repo }}"
+    dest: "{{ sudo_pair_unpack_directory }}"
+    version: "{{ sudo_pair_version }}"
 
 - name: build software
   command: cargo build --release
