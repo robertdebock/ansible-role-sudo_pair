@@ -31,6 +31,10 @@ sudo_pair_requirements:
     - cargo
     - clang-devel
     - git
+  Debian:
+    - cargo
+    - git
+    - libclang-dev
   Fedora:
     - cargo
     - clang-devel
