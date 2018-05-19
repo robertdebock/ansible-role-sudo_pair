@@ -1,26 +1,31 @@
 ---
 # vars file for sudo-pair
-sudo_pair_version: v0.9.2
-
-sudo_pair_release: https://github.com/square/sudo_pair/archive/sudo_pair-{{ sudo_pair_version }}.tar.gz
-sudo_pair_unpack_directory: sudo_pair-sudo_pair-{{ sudo_pair_version }}
+sudo_pair_git_repo: https://github.com/square/sudo_pair.git
+sudo_pair_unpack_directory: /tmp/sudo-pair
 
 sudo_pair_files:
-  - src: "/tmp/{{ sudo_pair_unpack_directory }}/target/release/libsudopair.dylib"
+  - src: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
     dest: /usr/libexec/sudo
-    mode: 0644
-  - src: "/tmp/{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
+    mode: "0644"
+  - src: "{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
     dest: /usr/bin/sudo_approve
-    mode: 0755
-  - src: "/tmp/{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.user"
+    mode: "0755"
+  - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.user"
     dest: /etc/sudo.prompt.user
-    mode: 0644
-  - src: "/tmp/{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.pair"
+    mode: "0644"
+  - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.pair"
     dest: /etc/sudo.prompt.pair
-    mode: 0644
+    mode: "0644"
 
 sudo_pair_requirements:
   CentOS:
+    - cargo
     - clang-devel
+    - git
   Fedora:
+    - cargo
     - clang-devel
+    - git
+  default:
+    - cargo
+    - git

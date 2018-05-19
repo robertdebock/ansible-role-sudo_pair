@@ -1,23 +1,21 @@
 ---
 # tasks file for sudo-pair
 - name: download and unpack software
-  unarchive:
-    src: "{{ sudo_pair_release }}"
-    dest: /tmp
-    remote_src: yes
+  git:
+    repo: "{{ sudo_pair_git_repo }}"
+    dest: "{{ sudo_pair_unpack_directory }}"
 
 - name: install requirements
   package:
     name: "{{ item }}"
   with_items:
-    - cargo
     - "{{ sudo_pair_requirements[ansible_distribution] | default([]) }}"
 
 - name: build software
   command: cargo build --release
   args:
-    chdir: /tmp/{{ sudo_pair_unpack_directory }}
-    creates: /tmp/{{ sudo_pair_unpack_directory }}/target
+    chdir: "{{ sudo_pair_unpack_directory }}"
+    creates: "{{ sudo_pair_unpack_directory }}/target"
 
 - name: install software
   copy:
@@ -31,6 +29,7 @@
 - name: create directory
   file:
     path: /var/run/sudo_pair
+    state: directory
     owner: root
     group: root
     mode: 0644
