@@ -42,3 +42,6 @@ sudo_pair_requirements:
   default:
     - cargo
     - git
+  Ubuntu:
+    - cargo
+    - git
