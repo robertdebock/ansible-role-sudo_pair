@@ -17,6 +17,10 @@ sudo_pair_files:
     dest: /usr/libexec/sudo
     mode: "0644"
 
+sudo_pair_directories:
+  - /var/run/sudo_pair
+  - /usr/libexec
+
 sudo-pair_binary_path: /usr/bin/sudo_approve
 sudo-pair_user_prompt_path: /etc/sudo_pair.prompt.user
 sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair

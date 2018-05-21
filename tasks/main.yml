@@ -28,9 +28,9 @@
   with_items:
     - "{{ sudo_pair_files }}"
 
-- name: create directory
+- name: create directories
   file:
-    path: /var/run/sudo_pair
+    path: "{{ sudo_pair_directories }}"
     state: directory
     owner: root
     group: root
