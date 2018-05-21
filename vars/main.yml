@@ -5,6 +5,7 @@ sudo_pair_unpack_directory: /tmp/sudo-pair
 
 sudo_pair_lib_directory:
   Archlinux: /usr/lib/sudo
+  Alpine: /usr/lib/sudo
   Debian: /usr/lib/sudo
   default: /usr/libexec/sudo
   Ubuntu: /usr/lib/sudo
