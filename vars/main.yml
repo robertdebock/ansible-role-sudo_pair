@@ -14,7 +14,7 @@ sudo_pair_files:
     dest: /etc/sudo.prompt.pair
     mode: "0644"
   - src: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
-    dest: /usr/libexec/sudo
+    dest: /usr/libexec/sudo/sudo_pair.so
     mode: "0644"
 
 sudo_pair_directories:
