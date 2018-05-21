@@ -49,3 +49,4 @@ sudo_pair_requirements:
   Ubuntu:
     - cargo
     - git
+    - libclang-dev
