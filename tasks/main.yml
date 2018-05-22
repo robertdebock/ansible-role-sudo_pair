@@ -6,6 +6,8 @@
   with_items:
     - "{{ sudo_pair_requirements[ansible_distribution]
       | default(sudo_pair_requirements['default'] ) }}"
+  environment:
+    ANSIBLE_SQUASH_ACTIONS: unset
 
 - name: download and unpack software
   git:

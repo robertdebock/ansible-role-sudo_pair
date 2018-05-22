@@ -65,18 +65,17 @@ This role has been tested against the following distributions and Ansible versio
 
 |distribution|ansible 2.3|ansible 2.4|ansible 2.5|
 |------------|-----------|-----------|-----------|
-|alpine-3.6|yes|yes|yes|
+|alpine-3.6|no|no|no|
 |alpine-3.7|yes|yes|yes|
-|archlinux|yes|yes|yes|
+|archlinux|no|no|no|
 |centos-6|no|no|no|
-|centos-7|yes|yes|yes|
+|centos-7|no|no|no|
 |debian-buster|yes|yes|yes|
-|debian-stretch|yes|yes|yes|
-|debian-wheezy|yes|yes|yes|
+|debian-stretch|no|no|no|
 |fedora-27|yes|yes|yes|
 |fedora-28|yes|yes|yes|
-|opensuse-42.2|yes|yes|yes|
-|opensuse-42.3|yes|yes|yes|
+|opensuse-42.2|no|no|no|
+|opensuse-42.3|no|no|no|
 |ubuntu-artful|yes|yes|yes|
 |ubuntu-bionic|yes|yes|yes|
 
