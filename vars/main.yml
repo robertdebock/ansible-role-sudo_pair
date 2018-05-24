@@ -4,10 +4,9 @@ sudo_pair_git_repo: "https://github.com/square/sudo_pair.git"
 sudo_pair_unpack_directory: /tmp/sudo-pair
 
 sudo_pair_lib_directory:
-  Archlinux: /usr/lib/sudo
-  Alpine: /usr/lib/sudo
   Debian: /usr/lib/sudo
   default: /usr/libexec/sudo
+  Fedora: /usr/libexec/sudo
   Ubuntu: /usr/lib/sudo
 
 sudo_pair_files:
@@ -34,19 +33,6 @@ sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair
 sudo-pair_socket_dir: /var/run/sudo_pair
 
 sudo_pair_requirements:
-  Alpine:
-    - cargo
-    - clang-libs
-    - git
-    - libffi-dev
-  Archlinux:
-    - cargo
-    - clang
-    - git
-  CentOS:
-    - cargo
-    - clang-devel
-    - git
   Debian:
     - cargo
     - git
