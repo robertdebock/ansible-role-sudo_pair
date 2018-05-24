@@ -38,6 +38,7 @@ sudo_pair_requirements:
     - cargo
     - clang-libs
     - git
+    - libffi-dev
   Archlinux:
     - cargo
     - clang
