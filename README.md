@@ -20,31 +20,9 @@ Access to a repository containing packages, likely on the internet.
 Role Variables
 --------------
 
-You can configure ara using this structure:
-```
-ara_configuration:
-  port:
-    section: ara
-    value: 8080
-```
-
-These are the settings you can use.
-
-- dir
-- database
-- host
-- port
-- logconfig
-- logfile
-- loglevel
-- logformat
-- sqldebug
-- ignore_parameters
-- ignore_empty_generation
-- ignore_mimetype_warnings
-- playbook_override
-- playbook_per_page
-- result_per_page
+- sudo_pair_version:
+- sudo-pair_gids_enforced: 0
+- sudo-pair_gids_exempted: none
 
 Dependencies
 ------------
@@ -52,6 +30,8 @@ Dependencies
 This role can be used to prepare your system:
 
 - robertdebock.bootstrap
+- robertdebock.epel
+- robertdebock.buildtools
 
 Download the dependencies by issuing this command:
 ```
@@ -88,10 +68,11 @@ The simplest way possible:
 
   roles:
     - robertdebock.bootstrap
-    - robertdebock.ara
+    - robertdebock.buildtools
+    - robertdebock.sudo-pair
 ```
 
-Install this role using `galaxy install robertdebock.update`.
+Install this role using `galaxy install robertdebock.sudo-pair`.
 
 License
 -------
