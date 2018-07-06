@@ -14,8 +14,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ sudo_pair_requirements[ansible_distribution]
-      | default(sudo_pair_requirements['default'] ) }}"
+    - "{{ sudo_pair_requirements }}"
   environment:
     ANSIBLE_SQUASH_ACTIONS: unset
 
