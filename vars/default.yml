@@ -16,8 +16,7 @@ sudo_pair_files:
     dest: /etc/sudo.prompt.pair
     mode: "0644"
   - src: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
-    dest: "{{ sudo_pair_lib_directory[ansible_distribution]
-          | default(sudo_pair_lib_directory['default']) }}/sudo_pair.so"
+    dest: "{{ sudo_pair_lib_directory }}"
     mode: "0644"
 
 sudo_pair_directories:
