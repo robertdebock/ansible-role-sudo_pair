@@ -1,0 +1,8 @@
+---
+# vars file for sudo-pair
+sudo_pair_lib_directory: /usr/libexec/sudo
+
+sudo_pair_requirements:
+  - cargo
+  - clang-devel
+  - git

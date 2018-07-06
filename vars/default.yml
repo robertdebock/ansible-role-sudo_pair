@@ -3,11 +3,7 @@
 sudo_pair_git_repo: "https://github.com/square/sudo_pair.git"
 sudo_pair_unpack_directory: /tmp/sudo-pair
 
-sudo_pair_lib_directory:
-  Debian: /usr/lib/sudo
-  default: /usr/libexec/sudo
-  Fedora: /usr/libexec/sudo
-  Ubuntu: /usr/lib/sudo
+sudo_pair_lib_directory: /usr/libexec/sudo
 
 sudo_pair_files:
   - src: "{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
@@ -33,18 +29,5 @@ sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair
 sudo-pair_socket_dir: /var/run/sudo_pair
 
 sudo_pair_requirements:
-  Debian:
-    - cargo
-    - git
-    - libclang-dev
-  Fedora:
-    - cargo
-    - clang-devel
-    - git
-  default:
-    - cargo
-    - git
-  Ubuntu:
-    - cargo
-    - git
-    - libclang-dev
+  - cargo
+  - git
