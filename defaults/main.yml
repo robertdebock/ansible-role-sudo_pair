@@ -2,5 +2,10 @@
 # defaults file for sudo-pair
 sudo_pair_version: 42a74ad98b6558ab947dc361a489362508e1b248
 
-sudo-pair_gids_enforced: 0
-sudo-pair_gids_exempted: none
+# The userids that are exempted
+# sudo_pair_gids_exempted: 123
+
+# The userids that are enforced
+# sudo_pair_gids_enforced: 123
+
+
