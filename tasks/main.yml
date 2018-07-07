@@ -7,6 +7,7 @@
 - name: load os-specific variables
   include_vars: "{{ item }}"
   with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
     - "{{ ansible_distribution }}.yml"
     - default.yml
 
@@ -28,7 +29,7 @@
   command: cargo build --release
   args:
     chdir: "{{ sudo_pair_unpack_directory }}"
-    creates: "{{ sudo_pair_unpack_directory }}/target"
+    creates: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
 
 - name: install software
   copy:
