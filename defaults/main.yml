@@ -1,6 +1,6 @@
 ---
 # defaults file for sudo-pair
-sudo_pair_version: 42a74ad98b6558ab947dc361a489362508e1b248
+sudo_pair_version: sudo_pair-v0.11.1
 
 # The userids that are exempted
 # sudo_pair_gids_exempted: 123

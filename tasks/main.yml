@@ -20,10 +20,10 @@
     ANSIBLE_SQUASH_ACTIONS: unset
 
 - name: download and unpack software
-  git:
-    repo: "{{ sudo_pair_git_repo }}"
+  unarchive:
+    src: "{{ sudo_pair_url }}"
     dest: "{{ sudo_pair_unpack_directory }}"
-    version: "{{ sudo_pair_version }}"
+    remote_src: yes
 
 - name: build software
   command: cargo build --release
