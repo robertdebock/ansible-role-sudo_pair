@@ -7,5 +7,3 @@ sudo_pair_version: 42a74ad98b6558ab947dc361a489362508e1b248
 
 # The userids that are enforced
 # sudo_pair_gids_enforced: 123
-
-
