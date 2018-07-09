@@ -23,7 +23,7 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - sudo-pair
+    - sudopair
     - sudo
     - alpine
     - centos
