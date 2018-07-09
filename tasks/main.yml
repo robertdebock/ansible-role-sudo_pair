@@ -19,15 +19,10 @@
   environment:
     ANSIBLE_SQUASH_ACTIONS: unset
 
-- name: create unpack directory
-  file:
-    path: "{{ sudo_pair_unpack_directory }}"
-    state: directory
-
 - name: download and unpack software
   unarchive:
     src: "{{ sudo_pair_url }}"
-    dest: "{{ sudo_pair_unpack_directory }}"
+    dest: /tmp
     remote_src: yes
 
 - name: build software
