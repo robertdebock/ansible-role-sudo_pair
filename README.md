@@ -21,8 +21,8 @@ Role Variables
 --------------
 
 - sudo_pair_version:
-- sudo-pair_gids_enforced: 0
-- sudo-pair_gids_exempted: none
+- sudo_pair_gids_enforced: 0
+- sudo_pair_gids_exempted: none
 
 Dependencies
 ------------
