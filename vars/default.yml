@@ -28,5 +28,4 @@ sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair
 sudo-pair_socket_dir: /var/run/sudo_pair
 
 sudo_pair_requirements:
-  - cargo
   - git

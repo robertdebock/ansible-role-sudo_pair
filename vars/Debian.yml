@@ -3,6 +3,5 @@
 sudo_pair_lib_directory: /usr/lib/sudo
 
 sudo_pair_requirements:
-  - cargo
   - git
   - libclang-dev
