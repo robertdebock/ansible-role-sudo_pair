@@ -29,3 +29,4 @@ sudo-pair_socket_dir: /var/run/sudo_pair
 
 sudo_pair_requirements:
   - git
+  - clang
