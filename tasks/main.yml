@@ -31,7 +31,7 @@
     chdir: "{{ sudo_pair_unpack_directory }}"
     creates: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
   environment:
-    PATH: "/bin:/usr/bin:/usr/local/bin"
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
 
 - name: install software
   copy:
