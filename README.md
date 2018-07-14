@@ -32,6 +32,7 @@ This role can be used to prepare your system:
 - [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
 - [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
 - [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools)
+- [robertdebock.cargo](https://travis-ci.org/robertdebock/ansible-role-cargo)
 
 Download the dependencies by issuing this command:
 ```
