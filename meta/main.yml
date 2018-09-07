@@ -10,7 +10,7 @@ galaxy_info:
   platforms:
     - name: Alpine
       versions:
-        - 3.7
+        - all
     - name: Debian
       versions:
         - all
