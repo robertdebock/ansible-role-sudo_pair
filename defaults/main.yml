@@ -7,3 +7,6 @@ sudo_pair_version: sudo_pair-v0.11.1
 
 # The userids that are enforced
 # sudo_pair_gids_enforced: 123
+
+# To update all packages installed by this roles, set `sudo-pair_package_state` to `latest`.
+sudo-pair_package_state: present

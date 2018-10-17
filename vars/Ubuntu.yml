@@ -1,7 +1,0 @@
----
-# vars file for sudo-pair
-sudo_pair_lib_directory: /usr/lib/sudo
-
-sudo_pair_requirements:
-  - git
-  - libclang-dev

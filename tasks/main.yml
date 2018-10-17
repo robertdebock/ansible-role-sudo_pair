@@ -1,32 +1,21 @@
 ---
 # tasks file for sudo-pair
-- name: load default variables
-  include_vars:
-    file: default.yml
-
-- name: load os-specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-    - "{{ ansible_distribution }}.yml"
-    - default.yml
-
 - name: install requirements
   package:
-    name: "{{ item }}"
+    name: "{{ sudo_pair_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+          | default(sudo_pair_requirements[ansible_distribution]
+          | default(sudo_pair_requirements['default'])) }}"
     state: present
-  with_items:
-    - "{{ sudo_pair_requirements }}"
   environment:
     ANSIBLE_SQUASH_ACTIONS: unset
 
-- name: download and unpack software
+- name: download and unpack sudo_pair
   unarchive:
     src: "{{ sudo_pair_url }}"
     dest: /tmp
     remote_src: yes
 
-- name: build software
+- name: build sudo_pair
   command: cargo build --release
   args:
     chdir: "{{ sudo_pair_unpack_directory }}"
@@ -34,7 +23,7 @@
   environment:
     PATH: "{{ ansible_env.PATH}}:/usr/local/bin"
 
-- name: install software
+- name: install sudo_pair
   copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
