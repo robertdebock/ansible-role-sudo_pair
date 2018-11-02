@@ -2,9 +2,7 @@
 # tasks file for sudo-pair
 - name: install requirements
   package:
-    name: "{{ sudo_pair_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-          | default(sudo_pair_requirements[ansible_distribution]
-          | default(sudo_pair_requirements['default'])) }}"
+    name: "{{ sudo_pair_requirements }}"
     state: present
   environment:
     ANSIBLE_SQUASH_ACTIONS: unset

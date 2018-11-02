@@ -3,37 +3,7 @@
 sudo_pair_url: "https://github.com/square/sudo_pair/archive/{{ sudo_pair_version }}.zip"
 sudo_pair_unpack_directory: /tmp/sudo_pair-{{ sudo_pair_version }}
 
-sudo_pair_lib_directory:
-  default: /usr/libexec/sudo
-  Archlinux: /usr/lib/sudo
-  Debian: /usr/lib/sudo
-  Ubuntu: /usr/lib/sudo
-  openSUSE Leap: /usr/lib/sudo
-  openSUSE Tumbleweed: /usr/lib/sudo
-
-sudo_pair_files:
-  - src: "{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
-    dest: /usr/bin/sudo_approve
-    mode: "0755"
-  - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.user"
-    dest: /etc/sudo.prompt.user
-    mode: "0644"
-  - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.pair"
-    dest: /etc/sudo.prompt.pair
-    mode: "0644"
-  - src: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
-    dest: "{{ sudo_pair_lib_directory[ansible_distribution] | default(sudo_pair_lib_directory['default']) }}"
-    mode: "0644"
-
-sudo_pair_directories:
-  - /var/run/sudo_pair
-
-sudo-pair_binary_path: /usr/bin/sudo_approve
-sudo-pair_user_prompt_path: /etc/sudo_pair.prompt.user
-sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair
-sudo-pair_socket_dir: /var/run/sudo_pair
-
-sudo_pair_requirements:
+_sudo_pair_requirements:
   default:
     - clang
     - git
@@ -46,3 +16,37 @@ sudo_pair_requirements:
   Fedora:
     - clang-devel
     - git
+
+sudo_pair_requirements: "{{ _sudo_pair_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_sudo_pair_requirements[ansible_distribution] | default(_sudo_pair_requirements['default'])) }}"
+
+_sudo_pair_lib_directory:
+  default: /usr/libexec/sudo
+  Archlinux: /usr/lib/sudo
+  Debian: /usr/lib/sudo
+  Ubuntu: /usr/lib/sudo
+  openSUSE Leap: /usr/lib/sudo
+  openSUSE Tumbleweed: /usr/lib/sudo
+
+sudo_pair_lib_directory: "{{ _sudo_pair_lib_directory[ansible_distribution] | default(_sudo_pair_lib_directory['default']) }}"
+
+sudo_pair_files:
+  - src: "{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
+    dest: /usr/bin/sudo_approve
+    mode: "0755"
+  - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.user"
+    dest: /etc/sudo.prompt.user
+    mode: "0644"
+  - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.pair"
+    dest: /etc/sudo.prompt.pair
+    mode: "0644"
+  - src: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
+    dest: "{{ sudo_pair_lib_directory }}"
+    mode: "0644"
+
+sudo_pair_directories:
+  - /var/run/sudo_pair
+
+sudo-pair_binary_path: /usr/bin/sudo_approve
+sudo-pair_user_prompt_path: /etc/sudo_pair.prompt.user
+sudo-pair_pair_prompt_path: /etc/sudo_pair.prompt.pair
+sudo-pair_socket_dir: /var/run/sudo_pair

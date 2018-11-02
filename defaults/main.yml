@@ -1,5 +1,7 @@
 ---
 # defaults file for sudo-pair
+
+# The version to install.
 sudo_pair_version: sudo_pair-v0.11.1
 
 # The userids that are exempted

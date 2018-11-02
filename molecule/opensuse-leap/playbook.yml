@@ -5,7 +5,7 @@
   gather_facts: false
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.buildtools
-    - role: robertdebock.cargo
-    - role: ansible-role-sudo-pair
+    - robertdebock.bootstrap
+    - robertdebock.buildtools
+    - robertdebock.cargo
+    - ansible-role-sudo-pair
