@@ -3,8 +3,7 @@ sudo-pair
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-sudo-pair.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-sudo-pair)
 
-Provides sudo-pair for your system.
-
+The purpose of this role is to install and configure sudo-pair on your system.
 
 Example Playbook
 ----------------
