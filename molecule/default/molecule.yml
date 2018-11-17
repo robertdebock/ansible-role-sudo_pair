@@ -38,6 +38,8 @@ platforms:
     image: ubuntu:artful
   - name: sudo-pair-ubuntu-devel
     image: ubuntu:devel
+  - name: sudo-pair-ubuntu-latest
+    image: ubuntu:latest
 provisioner:
   name: ansible
   lint:
