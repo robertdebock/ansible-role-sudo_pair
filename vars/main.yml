@@ -6,16 +6,12 @@ sudo_pair_unpack_directory: /tmp/sudo_pair-{{ sudo_pair_version }}
 _sudo_pair_requirements:
   default:
     - clang
-    - git
   CentOS-7:
     - clang-devel
-    - git
   Ubuntu:
-    - git
     - libclang-dev
   Fedora:
     - clang-devel
-    - git
 
 sudo_pair_requirements: "{{ _sudo_pair_requirements[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_sudo_pair_requirements[ansible_distribution] | default(_sudo_pair_requirements['default'])) }}"
 

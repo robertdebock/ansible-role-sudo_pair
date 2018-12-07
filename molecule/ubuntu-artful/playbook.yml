@@ -1,11 +1,12 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: no
-  become: yes
+  become: true
+  gather_facts: false
 
   roles:
     - robertdebock.bootstrap
     - robertdebock.buildtools
     - robertdebock.cargo
+    - robertdebock.git
     - ansible-role-sudo-pair

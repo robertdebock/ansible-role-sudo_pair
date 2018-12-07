@@ -8,4 +8,5 @@
     - robertdebock.bootstrap
     - robertdebock.buildtools
     - robertdebock.cargo
+    - robertdebock.git
     - ansible-role-sudo-pair

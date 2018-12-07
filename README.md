@@ -20,6 +20,7 @@ This example is taken from `molecule/default/playbook.yml`:
     - robertdebock.bootstrap
     - robertdebock.buildtools
     - robertdebock.cargo
+    - robertdebock.git
     - robertdebock.sudo-pair
 
 ```
@@ -59,6 +60,7 @@ The following roles can be installed to ensure all requirements are met, using `
 - robertdebock.epel
 - robertdebock.buildtools
 - robertdebock.cargo
+- robertdebock.git
 
 
 Context
