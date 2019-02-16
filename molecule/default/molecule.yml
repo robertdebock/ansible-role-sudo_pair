@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: sudo-pair-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: sudo-pair-ubuntu-artful
-    image: ubuntu:artful
+  - name: sudo-pair-ubuntu-latest
+    image: ubuntu:latest
+  - name: sudo_pair-ubuntu-rolling
+    image: ubuntu:rolling
   - name: sudo-pair-ubuntu-devel
     image: ubuntu:devel
   - name: sudo-pair-ubuntu-latest
