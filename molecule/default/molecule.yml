@@ -32,8 +32,6 @@ platforms:
     image: fedora:rawhide
   - name: sudo-pair-opensuse-leap
     image: opensuse:leap
-  - name: sudo-pair-opensuse-tumbleweed
-    image: opensuse:tumbleweed
   - name: sudo-pair-ubuntu-latest
     image: ubuntu:latest
   - name: sudo_pair-ubuntu-rolling
