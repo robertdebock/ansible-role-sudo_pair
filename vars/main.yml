@@ -21,7 +21,6 @@ _sudo_pair_lib_directory:
   Debian: /usr/lib/sudo
   Ubuntu: /usr/lib/sudo
   openSUSE Leap: /usr/lib/sudo
-  openSUSE Tumbleweed: /usr/lib/sudo
 
 sudo_pair_lib_directory: "{{ _sudo_pair_lib_directory[ansible_distribution] | default(_sudo_pair_lib_directory['default']) }}"
 
