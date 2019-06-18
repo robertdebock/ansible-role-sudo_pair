@@ -7,7 +7,7 @@
   environment:
     ANSIBLE_SQUASH_ACTIONS: unset
   register: sudo_pair_install_requirements
-  until: sudo_pair_install_requirements
+  until: sudo_pair_install_requirements is succeeded
   retries: 3
 
 - name: download and unpack sudo_pair
