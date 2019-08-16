@@ -106,6 +106,12 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
+Upstream version(s)
+-------------------
+
+This role [refers to a version](https://github.com/robertdebock/ansible-role-sudo-pair/blob/master/defaults/main.yml) of [sudo pair](https://github.com/square/sudo_pair/releases).
+
+
 Testing
 -------
 
