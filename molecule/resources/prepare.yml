@@ -6,6 +6,7 @@
 
   roles:
     - robertdebock.bootstrap
+    - robertdebock.core_dependencies
     - robertdebock.buildtools
     - robertdebock.cargo
     - robertdebock.git
