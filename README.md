@@ -6,6 +6,9 @@ sudo-pair
 
 Install and configure sudo-pair on your system.
 
+<img src="https://img.shields.io/ansible/role/d/"/>
+<img src="https://img.shields.io/ansible/quality/"/>
+
 Example Playbook
 ----------------
 
@@ -74,6 +77,17 @@ The following roles can be installed to ensure all requirements are met, using `
 
 ```
 
+This role uses the following modules:
+```yaml
+---
+- command
+- copy
+- file
+- package
+- template
+- unarchive
+```
+
 Context
 -------
 
@@ -93,7 +107,7 @@ This role has been tested against the following distributions and Ansible versio
 |alpine-edge*|no|no|no*|
 |alpine-latest|no|no|no*|
 |archlinux|yes|yes|yes*|
-|centos-6|no|no|no*|
+|centos-7|no|no|no*|
 |centos-latest|yes|yes|yes*|
 |debian-stable|yes|yes|yes*|
 |debian-unstable*|yes|yes|yes*|
@@ -105,6 +119,7 @@ This role has been tested against the following distributions and Ansible versio
 |ubuntu-rolling|yes|yes|yes*|
 
 A single star means the build may fail, it's marked as an experimental build.
+
 
 Included version(s)
 -------------------
