@@ -122,6 +122,14 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
+Exceptions
+----------
+
+Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
+
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| Alpine | cannot produce cdylib for `sudo_pair v0.11.1 (/tmp/sudo_pair-sudo_pair-v0.11.1/sudo_pair)` as the target `x86_64-unknown-linux-musl` does not support these crate types |
 
 Included version(s)
 -------------------
