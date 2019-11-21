@@ -27,6 +27,5 @@ galaxy_info:
     - sudo
     - centos
     - rhel
-    - ubuntu
 
 dependencies: []
