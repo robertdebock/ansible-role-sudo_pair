@@ -25,7 +25,6 @@ galaxy_info:
   galaxy_tags:
     - sudopair
     - sudo
-    - alpine
     - centos
     - debian
     - fedora
