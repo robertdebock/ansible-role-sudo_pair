@@ -26,7 +26,6 @@ galaxy_info:
     - sudopair
     - sudo
     - centos
-    - fedora
     - rhel
     - ubuntu
 
