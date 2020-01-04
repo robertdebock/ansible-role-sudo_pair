@@ -18,7 +18,6 @@ sudo_pair_requirements: "{{ _sudo_pair_requirements[ansible_distribution ~ '-' ~
 _sudo_pair_lib_directory:
   default: /usr/libexec/sudo
   Amazon: /usr/libexec
-  Archlinux: /usr/lib/sudo
   Debian: /usr/lib/sudo
   Suse: /usr/lib/sudo
 
