@@ -30,8 +30,7 @@
     dest: "{{ item.dest }}"
     mode: "{{ item.mode }}"
     remote_src: yes
-  with_items:
-    - "{{ sudo_pair_files }}"
+  loop: "{{ sudo_pair_files }}"
 
 - name: create directories
   file:
