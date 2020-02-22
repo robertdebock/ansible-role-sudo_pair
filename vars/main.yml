@@ -6,6 +6,8 @@ sudo_pair_unpack_directory: /tmp/sudo_pair-{{ sudo_pair_version }}
 _sudo_pair_requirements:
   default:
     - clang
+  Debian:
+    - libclang-dev
   CentOS-7:
     - clang-devel
   Ubuntu:
