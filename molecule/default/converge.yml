@@ -5,4 +5,4 @@
   gather_facts: yes
 
   roles:
-    - ansible-role-sudo-pair
+    - role: ansible-role-sudo-pair
