@@ -5,8 +5,8 @@
   gather_facts: no
 
   roles:
-    - robertdebock.bootstrap
-    - robertdebock.core_dependencies
-    - robertdebock.buildtools
-    - robertdebock.cargo
-    - robertdebock.git
+    - role: robertdebock.bootstrap
+    - role: robertdebock.core_dependencies
+    - role: robertdebock.buildtools
+    - role: robertdebock.cargo
+    - role: robertdebock.git
