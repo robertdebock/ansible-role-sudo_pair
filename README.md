@@ -2,9 +2,9 @@
 
 Install and configure sudo-pair on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-sudo-pair.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-sudo-pair)|[![github](https://github.com/robertdebock/ansible-role-sudo-pair/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-sudo-pair/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/sudo-pair)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/sudo-pair)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-sudo-pair.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-sudo-pair)|[![github](https://github.com/robertdebock/ansible-role-sudo-pair/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-sudo-pair/actions)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/robertdebock/sudo-pair)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/robertdebock/sudo-pair)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-sudo-pair.svg)](https://github.com/robertdebock/ansible-role-sudo-pair/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -78,10 +78,10 @@ The following roles can be installed to ensure all requirements are met, using `
 ```yaml
 ---
 - robertdebock.bootstrap
-- robertdebock.core_dependencies
-- robertdebock.epel
 - robertdebock.buildtools
 - robertdebock.cargo
+- robertdebock.core_dependencies
+- robertdebock.epel
 - robertdebock.git
 
 ```
