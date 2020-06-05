@@ -28,16 +28,16 @@ sudo_pair_lib_directory: "{{ _sudo_pair_lib_directory[ansible_distribution] | de
 sudo_pair_files:
   - src: "{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
     dest: /usr/bin/sudo_approve
-    mode: "0755"
+    mode: "755"
   - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.user"
     dest: /etc/sudo.prompt.user
-    mode: "0644"
+    mode: "644"
   - src: "{{ sudo_pair_unpack_directory }}/sample/etc/sudo.prompt.pair"
     dest: /etc/sudo.prompt.pair
-    mode: "0644"
+    mode: "644"
   - src: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
     dest: "{{ sudo_pair_lib_directory }}"
-    mode: "0644"
+    mode: "644"
 
 sudo_pair_directories:
   - /var/run/sudo_pair
