@@ -63,7 +63,7 @@ These variables are set in `defaults/main.yml`:
 # defaults file for sudo-pair
 
 # The version to install.
-sudo_pair_version: sudo_pair-v1.2.0
+sudo_pair_version: sudo_pair-v1.0.0
 
 # The userids that are exempted
 # sudo_pair_gids_exempted:
