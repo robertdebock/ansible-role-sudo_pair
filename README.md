@@ -18,6 +18,10 @@ This example is taken from `molecule/resources/converge.yml` and is tested on ea
 
   roles:
     - role: robertdebock.sudo-pair
+      sudo_pair_gids_exempted:
+        - 123
+      sudo_pair_gids_enforced:
+        - 321
 ```
 
 The machine may need to be prepared using `molecule/resources/prepare.yml`:
@@ -59,13 +63,15 @@ These variables are set in `defaults/main.yml`:
 # defaults file for sudo-pair
 
 # The version to install.
-sudo_pair_version: sudo_pair-v0.11.1
+sudo_pair_version: sudo_pair-v1.2.0
 
 # The userids that are exempted
-# sudo_pair_gids_exempted: 123
+# sudo_pair_gids_exempted:
+#   - 123
 
 # The userids that are enforced
-# sudo_pair_gids_enforced: 123
+# sudo_pair_gids_enforced:
+#   - 321
 ```
 
 ## [Requirements](#requirements)
