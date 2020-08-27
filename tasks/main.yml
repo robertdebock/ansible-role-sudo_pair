@@ -15,6 +15,7 @@
     src: "{{ sudo_pair_url }}"
     dest: /tmp
     remote_src: yes
+    mode: "0755"
 
 - name: build sudo_pair
   command: cargo build --release
