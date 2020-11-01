@@ -1,7 +1,8 @@
 ---
-- robertdebock.bootstrap
-- robertdebock.buildtools
-- robertdebock.cargo
-- robertdebock.core_dependencies
-- robertdebock.epel
-- robertdebock.git
+roles:
+  - name: robertdebock.bootstrap
+  - name: robertdebock.buildtools
+  - name: robertdebock.cargo
+  - name: robertdebock.core_dependencies
+  - name: robertdebock.epel
+  - name: robertdebock.git
