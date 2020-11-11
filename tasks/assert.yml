@@ -19,7 +19,7 @@
   assert:
     that:
       - item is defined
-      - item | int
+      - item is number
       - item | int > 0
     quiet: yes
   loop: "{{ sudo_pair_gids_exempted }}"
@@ -39,7 +39,7 @@
   assert:
     that:
       - item is defined
-      - item | int
+      - item is number
       - item | int > 0
     quiet: yes
   loop: "{{ sudo_pair_gids_enforced }}"
