@@ -18,7 +18,7 @@
     that:
       - item is defined
       - item is number
-      - item | int > 0
+      - item > 0
     quiet: yes
   loop: "{{ sudo_pair_gids_exempted }}"
   when:
@@ -37,7 +37,7 @@
     that:
       - item is defined
       - item is number
-      - item | int > 0
+      - item > 0
     quiet: yes
   loop: "{{ sudo_pair_gids_enforced }}"
   when:
