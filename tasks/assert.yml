@@ -1,4 +1,5 @@
 ---
+
 - name: test if sudo_pair_version is set correctly
   assert:
     that:
