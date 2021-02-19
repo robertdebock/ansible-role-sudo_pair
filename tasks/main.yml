@@ -7,14 +7,14 @@
   delegate_to: localhost
 
 - name: install requirements
-  package:
+  ansible.builtin.package:
     name: "{{ sudo_pair_requirements }}"
     state: present
   environment:
     ANSIBLE_SQUASH_ACTIONS: unset
 
 - name: download and unpack sudo_pair
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ sudo_pair_url }}"
     dest: /tmp
     remote_src: yes
@@ -29,7 +29,7 @@
     PATH: "{{ ansible_env.PATH }}:/usr/local/bin"
 
 - name: install sudo_pair
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     mode: "{{ item.mode }}"
@@ -37,7 +37,7 @@
   loop: "{{ sudo_pair_files }}"
 
 - name: create directories
-  file:
+  ansible.builtin.file:
     path: "{{ sudo_pair_directories }}"
     state: directory
     owner: root
@@ -45,7 +45,7 @@
     mode: "644"
 
 - name: configure sudo
-  template:
+  ansible.builtin.template:
     src: sudo.conf.j2
     dest: /etc/sudo.conf
     owner: root
