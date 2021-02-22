@@ -21,7 +21,7 @@
     mode: "0755"
 
 - name: build sudo_pair
-  command: cargo build --release
+  ansible.builtin.command: cargo build --release
   args:
     chdir: "{{ sudo_pair_unpack_directory }}"
     creates: "{{ sudo_pair_unpack_directory }}/target/release/libsudo_pair.so"
