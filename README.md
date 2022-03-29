@@ -104,14 +104,6 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-## [Exceptions](#exceptions)
-
-Some roles can't run on a specific distribution or version. Here are some exceptions.
-
-| variation                 | reason                 |
-|---------------------------|------------------------|
-| Alpine | cannot produce cdylib for `sudo_pair v0.11.1 (/tmp/sudo_pair-sudo_pair-v0.11.1/sudo_pair)` as the target `x86_64-unknown-linux-musl` does not support these crate types |
-
 ## [Included version(s)](#included-versions)
 
 This role [refers to a version](https://github.com/robertdebock/ansible-role-sudo-pair/blob/master/defaults/main.yml) released by square on GitHub. Check the released version(s) here:
