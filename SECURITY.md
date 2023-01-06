@@ -16,7 +16,7 @@ The current major version is supported. For example if the current version is 3.
 
 ## [Reporting a Vulnerability](#reporting-a-vulnarability)
 
-Please [open an issue](https://github.com/robertdebock/ansible-role-sudo-pair/issues) describing the vulnerability.
+Please [open an issue](https://github.com/robertdebock/ansible-role-sudo_pair/issues) describing the vulnerability.
 
 Tell them where to go, how often they can expect to get an update on a
 reported vulnerability, what to expect if the vulnerability is accepted or
