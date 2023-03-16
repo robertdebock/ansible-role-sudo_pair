@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: yes
 
   roles:
-    - role: robertdebock.sudo-pair
+    - role: robertdebock.sudo_pair
       sudo_pair_gids_exempted:
         - 123
       sudo_pair_gids_enforced:
@@ -50,7 +50,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-# defaults file for sudo-pair
+# defaults file for sudo_pair
 
 # The version to install.
 sudo_pair_version: sudo_pair-v1.0.0
