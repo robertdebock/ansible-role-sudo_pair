@@ -5,6 +5,7 @@
     that:
       - sudo_pair_version is defined
       - sudo_pair_version is string
+      - sudo_pair_version is not none
     quiet: yes
 
 - name: assert | Test if sudo_pair_gids_exempted is set correctly
