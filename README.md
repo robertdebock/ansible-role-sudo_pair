@@ -1,4 +1,4 @@
-# Ansible role [sudo_pair](#sudo_pair)
+# [Ansible role sudo_pair](#sudo_pair)
 
 Install and configure sudo-pair on your system.
 
