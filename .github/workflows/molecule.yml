@@ -7,8 +7,8 @@ name: Ansible Molecule
 
 on:
   push:
-    tags_ignore:
-      - '*'
+    branches:
+      - master
   pull_request:
   schedule:
     - cron: '37 19 19 * *'
@@ -37,8 +37,6 @@ jobs:
             tag: "latest"
           - image: "debian"
             tag: "latest"
-          - image: "debian"
-            tag: "bullseye"
           - image: "fedora"
             tag: "38"
           - image: "fedora"
