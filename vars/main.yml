@@ -19,8 +19,10 @@ sudo_pair_requirements: "{{ _sudo_pair_requirements[ansible_distribution ~ '-' ~
 
 _sudo_pair_lib_directory:
   default: /usr/libexec/sudo
+  Ubuntu-18: /usr/lib/sudo
+  Ubuntu-20: /usr/lib/sudo
   Suse: /usr/lib/sudo
-sudo_pair_lib_directory: "{{ _sudo_pair_lib_directory[ansible_distribution ~ '-' ~ ansible_distribution_version] | default (_sudo_pair_lib_directory[ansible_distribution] | default(_sudo_pair_lib_directory[ansible_os_family] | default(_sudo_pair_lib_directory['default'] ))) }}"
+sudo_pair_lib_directory: "{{ _sudo_pair_lib_directory[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default (_sudo_pair_lib_directory[ansible_distribution] | default(_sudo_pair_lib_directory[ansible_os_family] | default(_sudo_pair_lib_directory['default'] ))) }}"
 
 sudo_pair_files:
   - src: "{{ sudo_pair_unpack_directory }}/sample/bin/sudo_approve"
