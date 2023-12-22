@@ -1,5 +1,7 @@
 # [Ansible role sudo_pair](#sudo_pair)
 
+> THIS ROLE HAS BEEN ARCHIVED AS OF DEC 2023.
+
 Install and configure sudo-pair on your system.
 
 |GitHub|GitLab|Downloads|Version|
